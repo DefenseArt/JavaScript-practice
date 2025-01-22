@@ -72,3 +72,5 @@ const getGrade1 = score => {
 }
 const grade2 = getGrade1(70);
 console.log(grade2);
+
+
