@@ -22,6 +22,7 @@
 - **8. [배열 내장함수](./JavaScript-Docs/builtin.md)**
 - **9. [프로토타입과 클래스](./JavaScript-Docs/prototype.md)**
 
-
+### **2장. JavaScript 문법**
+- **1. [삼항 연산자](./JavaScript-Docs/Ternary.md)**
 ---
 
