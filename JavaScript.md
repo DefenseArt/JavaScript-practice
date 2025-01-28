@@ -24,5 +24,6 @@
 
 ### **2장. JavaScript 문법**
 - **1. [삼항 연산자](./JavaScript-Docs/Ternary.md)**
+- **2. [Truthy and Falsy](./JavaScript-Docs/Truthy.md)**
 ---
 
