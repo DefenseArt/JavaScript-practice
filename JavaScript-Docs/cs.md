@@ -16,6 +16,8 @@ console.log(isAnimal('개')); // true
 console.log(isAnimal('노트북')); // false
 ```
 
+`includes()` : 배열에 특정 값이 포함되어 있는지 확인하는 함수
+
 스마트한 방식: 배열과 `includes` 사용
 ```js
 function isAnimal(name) {
