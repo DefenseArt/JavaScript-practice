@@ -28,5 +28,6 @@
 - **3. [단축 평가 논리 계산법](./JavaScript-Docs/short.md)**
 - **4. [함수의 기본 파라미터](./JavaScript-Docs/parameters.md)**
 - **5. [조건문 스마트하게 쓰기](./JavaScript-Docs/cs.md)**
+- **6. [비구조화 할당 문법](./JavaScript-Docs/Destructuring.md)**
 ---
 
