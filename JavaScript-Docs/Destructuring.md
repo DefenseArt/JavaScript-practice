@@ -124,17 +124,8 @@ const deepObject = {
 여기서 name, languages, value 값들을 밖으로 꺼내는 2가지 방법
 
 ### 첫번째 비구조화 할당 문법을 두번 사용
+객체의 깊은 구조를 한꺼번에 추출하지 않고, 단계별로 나눠서 추출하는 방법
 ```js
-const deepObject = {
-  state: {
-    information: {
-      name: 'velopert',
-      languages: ['korean', 'english', 'chinese']
-    }
-  },
-  value: 5
-};
-
 const { name, languages } = deepObject.state.information;
 const { value } = deepObject;
 
@@ -162,23 +153,17 @@ const extracted = {
   value: value
 }
 ```
-ES6 의 Object-shorthand 
-- key 이름으로 선언된 값이 존재하다면 바로 매칭시켜주는 문법
+### ES6 의 Object-shorthand 
+key 이름으로 선언된 값이 존재하다면 바로 매칭시켜주는 문법
+
+객체 속성의 key와 value 이름이 같으면 `name: name` → `name`처럼 축약할 수 있다
+
 
 
 
 ### 두번째 한 번에 모두 추출하는 방법
+비구조화 할당을 한 번에 처리하는 방법
 ```js
-const deepObject = {
-  state: {
-    information: {
-      name: 'velopert',
-      languages: ['korean', 'english', 'chinese']
-    }
-  },
-  value: 5
-};
-
 const {
   state: {
     information: { name, languages }
