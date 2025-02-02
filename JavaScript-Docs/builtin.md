@@ -200,6 +200,12 @@ console.log(array.join(', ')); // 1, 2, 3, 4, 5
 
 ### reduce
 배열의 각 요소를 누적하여 하나의 값으로 축약
+
+`reduce()`는 **배열의 모든 값을 하나의 결과값으로 합칠 때 사용**  
+
+`accumulator`는 이전 값의 누적된 결과  
+
+`current`는 현재 처리 중인 값  
 ```js
 const numbers = [1, 2, 3, 4, 5];
 let sum = numbers.reduce((accumulator, current) => {
