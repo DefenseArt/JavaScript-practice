@@ -31,7 +31,7 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ## 목차
 
-###  **1장. JavaScript 기본**
+###  **1장. JavaScript 기본 개념**
 - **1. [변수](./JavaScript-Docs/Basics/Variables.md)**
 - **2. [연산자](./JavaScript-Docs/Basics/operator.md)**
 - **3. [조건문](./JavaScript-Docs/Basics/condi.md)**
@@ -44,7 +44,7 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ---
 
-### **2장. JavaScript 문법**
+### **2장. JavaScript 문법 심화**
 - **1. [삼항 연산자](./JavaScript-Docs/Advanced/Ternary.md)**
 - **2. [Truthy and Falsy](./JavaScript-Docs/Advanced/Truthy.md)**
 - **3. [단축 평가 논리 계산법](./JavaScript-Docs/Advanced/short.md)**
