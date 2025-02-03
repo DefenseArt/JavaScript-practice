@@ -1,5 +1,5 @@
 # JavaScript 정리 문서
-
+---
 
 ## 개요
 이 문서는 **JavaScript 학습 내용을 정리하고 관리하기 위한 메인 파일**입니다.  
@@ -31,7 +31,7 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ## 목차
 
-###  **1장. JavaScript 기본 개념**
+###  **1장. JavaScript 기본**
 - **1. [변수](./JavaScript-Docs/Basics/Variables.md)**
 - **2. [연산자](./JavaScript-Docs/Basics/operator.md)**
 - **3. [조건문](./JavaScript-Docs/Basics/condi.md)**
@@ -44,7 +44,7 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ---
 
-### **2장. JavaScript 문법 심화**
+### **2장. JavaScript 문법**
 - **1. [삼항 연산자](./JavaScript-Docs/Advanced/Ternary.md)**
 - **2. [Truthy and Falsy](./JavaScript-Docs/Advanced/Truthy.md)**
 - **3. [단축 평가 논리 계산법](./JavaScript-Docs/Advanced/short.md)**
@@ -55,5 +55,6 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 - **8. [Scope의 이해](./JavaScript-Docs/Advanced/Scope.md)**
 
 ### **3장. 비동기 처리**
-- **1. Promise**
+- **1. [Promise](./JavaScript-Docs/Async/Promise.md)**
 ---
+
