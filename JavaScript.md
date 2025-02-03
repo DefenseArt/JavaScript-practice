@@ -24,6 +24,7 @@ JavaScript를 더 효율적으로 사용하기 위한 문법들을 정리한 장
 삼항 연산자, Truthy & Falsy, 비구조화 할당, scope
 
 **3장. [비동기 처리](#3장-비동기-처리)**
+JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ---
 
@@ -53,8 +54,6 @@ JavaScript를 더 효율적으로 사용하기 위한 문법들을 정리한 장
 - **8. [Scope의 이해](./JavaScript-Docs/Advanced/Scope.md)**
 
 ### **3장. 비동기 처리**
-JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장입니다.
-
 - **1. Promise**
 ---
 
