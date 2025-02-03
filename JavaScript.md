@@ -30,6 +30,9 @@
 - **5. [조건문 스마트하게 쓰기](./JavaScript-Docs/cs.md)**
 - **6. [비구조화 할당 문법](./JavaScript-Docs/Destructuring.md)**
 - **7. [spread 와 rest](./JavaScript-Docs/spread.md)**
-- 
+- **8. [Scope의 이해](./JavaScript-Docs/Scope.md)**
+
+### **3장. 비동기 처리**
+- **1. Promise**
 ---
 
