@@ -56,5 +56,10 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 ### **3장. 비동기 처리**
 - **1. [Promise](./JavaScript-Docs/Async/Promise.md)**
+- **2. [async/await](/JavaScript-Docs/Async/async.md)**
+
 ---
 
+### 복기
+1. 2장 7,8
+2. 3장 1,2
