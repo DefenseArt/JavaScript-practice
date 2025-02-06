@@ -27,6 +27,13 @@ JavaScript를 더 효율적으로 사용하기 위한 문법들을 정리한 장
 
 JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
+Promise, async/await
+
+**4장. [HTML과 JavaScript 연동하기](#4장-html-과-javascript-연동하기)**
+
+JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구현하는 방법을 학습하는 장
+
+
 ---
 
 ## 목차
@@ -58,8 +65,12 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 - **1. [Promise](./JavaScript-Docs/Async/Promise.md)**
 - **2. [async/await](/JavaScript-Docs/Async/async.md)**
 
+### **4장. HTML과 JavaScript 연동하기**
+- **1. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
+
 ---
 
 ### 복기
 1. 2장 7,8
 2. 3장 1,2
+3. 3장 2번 async/await 부분 내용 추가
