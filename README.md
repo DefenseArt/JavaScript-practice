@@ -29,7 +29,7 @@ JavaScript에서 비동기 처리를 다루는 방법을 학습하는 장
 
 Promise, async/await
 
-**4장. [HTML과 JavaScript 연동하기](#4장-html-과-javascript-연동하기)**
+**4장. [HTML과 JavaScript 연동하기](#4장-html과-javascript-연동하기)**
 
 JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구현하는 방법을 학습하는 장
 
