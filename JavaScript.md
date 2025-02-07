@@ -67,6 +67,7 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 
 ### **4장. HTML과 JavaScript 연동하기**
 - **1. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
+- **2. [모달](/JavaScript-Docs/Web_Interaction/modal.md)**
 
 ---
 
