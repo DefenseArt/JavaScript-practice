@@ -61,16 +61,13 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 - **7. [spread 와 rest](./JavaScript-Docs/Advanced/spread.md)**
 - **8. [Scope의 이해](./JavaScript-Docs/Advanced/Scope.md)**
 
----
-
 ### **3장. 비동기 처리**
 - **1. [Promise](./JavaScript-Docs/Async/Promise.md)**
 - **2. [async/await](/JavaScript-Docs/Async/async.md)**
 
----
-
 ### **4장. HTML과 JavaScript 연동하기**
 - **1. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
+- **2. [모달](/JavaScript-Docs/Web_Interaction/modal.md)**
 
 ---
 
