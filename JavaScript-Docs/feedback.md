@@ -56,7 +56,11 @@ decrease.onclick = () => {
 // - 감소도 같음
 ```
 
-### 실행 화면
+### 실행 화면 및 코드
 ![카운터 프로젝트 실행화면](./images/ex.gif)
+
+**[JavaScript](/code/Counter/Counter.js)**
+
+**[HTML](/code/Counter/index.html)**
 
 --- 
