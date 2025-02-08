@@ -71,7 +71,4 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 
 ---
 
-### 복기
-1. 2장 7,8
-2. 3장 1,2
-3. 3장 2번 async/await 부분 내용 추가
+### **[피드백](/JavaScript-Docs/feedback.md)**
