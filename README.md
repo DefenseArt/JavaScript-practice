@@ -71,4 +71,4 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 
 ---
 
-### **[부족한 점](/JavaScript-Docs/feedback.md)**
+### **[피드백](/JavaScript-Docs/feedback.md)**
