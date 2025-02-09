@@ -7,6 +7,8 @@
 
 **문서가 지속적으로 업데이트될 예정입니다.**  
 
+**4장. 1. DOM 조작 & 이벤트 개념 정리 지속적으로 업데이트 예정**
+
 --- 
 
 ### JavaScript 학습 문서 구성
@@ -66,9 +68,11 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 - **2. [async/await](/JavaScript-Docs/Async/async.md)**
 
 ### **4장. HTML과 JavaScript 연동하기**
-- **1. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
-- **2. [모달](/JavaScript-Docs/Web_Interaction/modal.md)**
+- **1. [DOM 조작 & 이벤트 개념 정리](/JavaScript-Docs/Web_Interaction/DOM-Event-Basics.md)**
+- **2. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
+- **3. [모달](/JavaScript-Docs/Web_Interaction/modal.md)**
 
 ---
 
 ### **[피드백](/JavaScript-Docs/feedback.md)**
+
