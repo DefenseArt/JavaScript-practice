@@ -5,6 +5,76 @@
 
 ---
 
+### getElementById() 
+> `getElementById()`    
+> 특정 `id` 값을 가진 요소를 선택할 때 사용하며 한 개의 요소만 선택 가능(id는 고유하기 때문)
+```html
+<h1 id="title">Hello, JavaScript!</h1>
+
+<script>
+  const title = document.getElementById("title");
+  console.log(title.innerText); // "Hello, JavaScript!"
+</script>
+```
+### querySelector() vs querySelectorAll()
+> `querySelector()`   
+> `CSS` 선택자로 요소 선택하며 `id`, `class`, `태그` 모두 선택 가능하다. (첫 번째 일치하는 요소 하나만 가져옴)
+```html
+<h1 class="title">첫 번째 제목</h1>
+<h1 class="title">두 번째 제목</h1>
+
+<script>
+  const title = document.querySelector(".title"); // 첫 번째 .title 선택
+  console.log(title.innerText); // "첫 번째 제목"
+</script>
+```
+
+### querySelectorAll()
+> `querySelectorAll()`    
+> 여러개의 요소 선택하며 같은 클래스나 태그를 가진 여러 개의 요소를 선택할 때 사용
+```html
+<p class="text">첫 번째 문장</p>
+<p class="text">두 번째 문장</p>
+
+<script>
+  const texts = document.querySelectorAll(".text"); // 모든 .text 선택
+  console.log(texts[0].innerText); // "첫 번째 문장"
+  console.log(texts[1].innerText); // "두 번째 문장"
+</script>
+```
+
+### getElementsByClassName()
+> `getElementsByClassName()`    
+> 특정 `class` 값을 가진 모든 요소를 선택할 때 사용
+```html
+<div class="box">첫 번째 박스</div>
+<div class="box">두 번째 박스</div>
+
+<script>
+  const boxes = document.getElementsByClassName("box");
+  console.log(boxes[0].innerText); // "첫 번째 박스"
+</script>
+```
+
+### getElementsByTagName()
+> `getElementsByTagName()`    
+> 특정 태그 이름을 가진 모든 요소 선택
+
+```html
+<p>첫 번째 문장</p>
+<p>두 번째 문장</p>
+
+<script>
+  const paragraphs = document.getElementsByTagName("p");
+  console.log(paragraphs[0].innerText); // "첫 번째 문장"
+</script>
+```
+
+
+
+
+
+
 ### on 접두사 vs addEventListener
 `on 접두사 속성` : 해당 이벤트에 관련해서 1개의 함수만 등록 가능
 
