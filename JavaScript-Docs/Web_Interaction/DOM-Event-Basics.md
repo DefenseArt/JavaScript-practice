@@ -88,7 +88,7 @@
 </script>
 ```
 
-### ineerHTML
+### innerHTML
 > `innerHTML`   
 > 요소 내부의 HTML까지 변경 가능 (HTML 태그 적용)
 
