@@ -70,10 +70,41 @@
 </script>
 ```
 
+### innerText
+> `ineerText`   
+> 요소 내부의 텍스트를 변경 (HTML 태그 적용)
 
+```html
+<p id="text">안녕하세요!</p>
+<button id="changeText">문장 변경</button>
 
+<script>
+  const text = document.getElementById("text");
+  const button = document.getElementById("changeText");
 
+  button.onclick = () => {
+    text.innerText = "텍스트가 변경되었습니다!";
+  };
+</script>
+```
 
+### ineerHTML
+> `innerHTML`   
+> 요소 내부의 HTML까지 변경 가능 (HTML 태그 적용)
+
+```html
+<p id="text">안녕하세요!</p>
+<button id="changeHTML">HTML 변경</button>
+
+<script>
+  const text = document.getElementById("text");
+  const button = document.getElementById("changeHTML");
+
+  button.onclick = () => {
+    text.innerHTML = "<b>굵은 글씨로 변경됨!</b>";
+  };
+</script>
+```
 
 ### on 접두사 vs addEventListener
 `on 접두사 속성` : 해당 이벤트에 관련해서 1개의 함수만 등록 가능
