@@ -157,3 +157,36 @@
 ```
 
 위 코드를 실행할 경우 `클릭 이벤트 발생 1`, `클릭 이벤트 발생 2` 두 개의 이벤트 핸들러가 모두 실행됨
+
+
+### removeEventListener()
+
+> `removeEventListener()`   
+> `addEventListener()`로 추가한 이벤트를 제거하는 기능, 이벤트 리스너를 삭제하면 해당 이벤트는 더 이상 실행되지 않음
+
+```js
+const button = document.getElementById("myButton");
+
+function sayHello() {
+  console.log("안녕하세요!");
+}
+
+// 이벤트 추가
+button.addEventListener("click", sayHello);
+
+// 이벤트 제거
+button.removeEventListener("click", sayHello);
+```
+
+주의할 점
+```js
+button.addEventListener("click", () => {
+  console.log("안녕하세요!");
+});
+
+// removeEventListener가 작동하지 않음!
+button.removeEventListener("click", () => {
+  console.log("안녕하세요!");
+});
+```
+익명 함수를 사용하면 기존 이벤트와 다르게 취급되므로 기존의 이벤트 리스너를 제거할 수 없음
