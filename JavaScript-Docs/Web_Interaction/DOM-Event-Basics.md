@@ -190,3 +190,53 @@ button.removeEventListener("click", () => {
 });
 ```
 익명 함수를 사용하면 기존 이벤트와 다르게 취급되므로 기존의 이벤트 리스너를 제거할 수 없음
+
+### style
+
+> `style`     
+> `JavaScript`에서 요소의 CSS 스타일을 직접 변경할 수 있으며, HTML의 `style` 속성과 동일하지만, JS에서 `style`을 조작 가능
+
+**사용법**
+```js
+element.style.속성 = "값";
+```
+
+**예제**
+```js
+const element = document.getElementById("text");
+element.style.color = "blue"; // 글자 색상을 파란색으로 변경
+element.style.fontSize = "20px"; // 글자 크기를 20px로 변경
+element.style.backgroundColor = "yellow"; // 배경색을 노란색으로 변경
+```
+사용할 때 `-(하이픈)`을 제거 후 낙타 표기법을 사용해야함
+
+**주의할 점**
+
+`document`는 웹 페이지 전체(HTML 문서)를 나타내는 객체이므로, 우리가 JavaScript로 HTML의 요소를 조작하려면 항상 `document`에서 시작해야함
+
+특정 요소를 나타내고 싶으면 ?     
+`document`대신, 특정 요소를 선택
+```js
+  const text = document.getElementById("text");
+  const button = document.getElementById("changeback");
+
+  button.addEventListener("click", () => {
+    text.style.backgroundColor = "yellow"; // 특정 요소의 배경색 변경
+  });
+```
+
+
+### classList
+
+> `classList`   
+> `style`을 직접 변경하는 대신, CSS 클래스를 추가/제거하여 스타일을 변경하는 방법
+
+**사용법**
+```js
+element.classList.add("클래스명");  // 클래스 추가
+element.classList.remove("클래스명");  // 클래스 제거
+element.classList.toggle("클래스명");  // 클래스 추가/제거 토글
+```
+CSS에서 스타일을 정의한 후, JS에서 해당 클래스를 추가/삭제하는 방식
+
+`toggle()` : 클래스가 있으면 제거하고, 없으면 추가하는 기능
