@@ -239,4 +239,75 @@ element.classList.toggle("클래스명");  // 클래스 추가/제거 토글
 ```
 CSS에서 스타일을 정의한 후, JS에서 해당 클래스를 추가/삭제하는 방식
 
-`toggle()` : 클래스가 있으면 제거하고, 없으면 추가하는 기능
+`toggle()` : CSS에 해당 클래스가 있으면 제거하고, 없으면 추가하는 기능, 스위치처럼 ON/OFF 기능을 수행
+
+### createElement()
+
+> `createElement()`   
+> 새로운 HTML 요소를 JavaSCript에서 생성, 생성된 요소는 아직 화면에 보이지 않음 (DOM에 추가해야 함)
+
+**예제**
+```js
+// 새로운 p 태그 생성
+const newParagraph = document.createElement("p");
+newParagraph.innerText = "새로운 문장이 추가되었습니다!";
+console.log(newParagraph); 
+// <p>새로운 문장이 추가되었습니다!</p>
+```
+이 상태에선 아직 DOM에 추가되지 않음 (`appendChild()` 필요)
+
+### appendChild()
+
+> `appendChild()`   
+> `부모요소.appendChild(추가할 요소)` 를 사용하여 생성한 요소를 DOM에 추가
+
+**예제**
+```html
+<div id="container"></div>
+
+<script>
+  const container = document.getElementById("container"); // 부모 요소 선택
+  const newParagraph = document.createElement("p"); // 새로운 요소 생성
+  newParagraph.innerText = "새로운 문장이 추가되었습니다!";
+  container.appendChild(newParagraph); // 부모 요소에 추가
+</script>
+```
+
+### remove() 
+
+> `remove()`    
+> 기존에 추가된 요소를 삭제할 때 사용
+
+```html
+<p id="text">이 문장은 삭제될 예정입니다!</p>
+<button id="removeBtn">삭제</button>
+
+<script>
+  const text = document.getElementById("text");
+  const removeBtn = document.getElementById("removeBtn");
+
+  removeBtn.addEventListener("click", () => {
+    text.remove(); // 요소 삭제
+  });
+</script>
+```
+
+### .value
+
+> `.value`    
+> `<input>`, `<textarea>` 같은 입력 요소에서 사용자가 입력한 값을 가져옴 
+
+**예제**
+```html
+<input type="text" id="inputBox" placeholder="여기에 입력하세요">
+<button id="checkValue">확인</button>
+
+<script>
+  const input = document.getElementById("inputBox");
+  const button = document.getElementById("checkValue");
+
+  button.addEventListener("click", () => {
+    console.log(input.value); // 사용자가 입력한 값 출력
+  });
+</script>
+```
