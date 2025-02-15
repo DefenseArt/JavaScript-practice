@@ -64,3 +64,36 @@ decrease.onclick = () => {
 **[HTML](/code/Counter/index.html)**
 
 --- 
+
+### 2. 배경색 변경
+
+**기능 :** 버튼을 클릭하면 배경색이 변경됨
+
+관련 문서: [Style](/JavaScript-Docs/Web_Interaction/DOM-Event-Basics.md#style)
+
+### 부족했던 개념 및 피드백 
+> 1. `Math.floor` : 뜻 기술     
+> 사용법 : `const random = Math.floor(Math.random() * color.length);`
+
+
+### 주요 코드 (요약)
+```js
+const backcolor = document.getElementById("backcolor"); // 버튼 요소 가져오기
+
+backcolor.addEventListener("click", () => {
+  const color = ["red", "green", "blue", "yellow"]; // 색상 배열
+
+  const random = Math.floor(Math.random() * color.length); // 0 ~ 3 사이의 랜덤 숫자 생성
+
+  document.body.style.backgroundColor = color[random]; // 랜덤 색상 적용
+});
+```
+
+### 실행 화면 및 코드
+![배경색 변경 화면](./images/backgroundcolor_random.gif)
+
+**[JavaScript](/code/randomcolor/backrandomcolor.js)**
+
+**[HTML](/code/randomcolor/index.html)**
+
+--- 
