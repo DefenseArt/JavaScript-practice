@@ -72,8 +72,8 @@ decrease.onclick = () => {
 관련 문서: [Style](/JavaScript-Docs/Web_Interaction/DOM-Event-Basics.md#style)
 
 ### 부족했던 개념 및 피드백 
-> 1. `Math.floor` : 뜻 기술     
-> 사용법 : `const random = Math.floor(Math.random() * color.length);`
+> 1. `Math.floor` : 숫자를 내림하여 정수로 만드는 함수     
+> 사용법 : `console.log(Math.floor(4.9)); // 4  (소수점 버림)`
 
 
 ### 주요 코드 (요약)
