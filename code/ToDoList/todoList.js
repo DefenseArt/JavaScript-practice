@@ -1,6 +1,6 @@
-const inputField = document.getElementById("in"); 
-const addButton = document.getElementById("but"); 
-const todoList = document.getElementById("ui"); 
+const inputField = document.getElementById("inputField"); 
+const addButton = document.getElementById("addButton"); 
+const todoList = document.getElementById("todoList"); 
 
 addButton.addEventListener("click", () => {
   if (inputField.value.trim() === "") return; 
