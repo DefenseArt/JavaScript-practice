@@ -5,7 +5,7 @@
 ---
 ## 실습 프로젝트 피드백 및 개념 보완
 
-### 1. 카운터 프로젝트
+### 1. 카운터 
 **기능 :** 버튼을 클릭하면 숫자가 증가/감소
 
 관련 문서: [Counter](/JavaScript-Docs/Web_Interaction/Counter.md)
@@ -25,6 +25,11 @@
 
 > 5. `innerText` :  HTML 요소 내부의 텍스트 값을 가져옴     
 > 사용법: `변수.innerText`
+
+### 피드백
+1. `getElementById` 의 뜻과 사용법을 정확히 인지하지 못했음
+2. `parseInt()` 함수의 응용이 미숙했음
+
 
 ### 주요 코드 (요약)
 ```js
@@ -71,9 +76,12 @@ decrease.onclick = () => {
 
 관련 문서: [Style](/JavaScript-Docs/Web_Interaction/DOM-Event-Basics.md#style)
 
-### 부족했던 개념 및 피드백 
+### 부족했던 개념 
 > 1. `Math.floor` : 숫자를 내림하여 정수로 만드는 함수     
 > 사용법 : `console.log(Math.floor(4.9)); // 4  (소수점 버림)`
+
+### 피드백 
+1. `Math` 함수 종류를 더 찾아보기
 
 
 ### 주요 코드 (요약)
@@ -97,3 +105,63 @@ backcolor.addEventListener("click", () => {
 **[HTML](/code/randomcolor/index.html)**
 
 --- 
+
+### 3. To-Do List 
+
+**기능 :** 할 일 추가 및 삭제
+
+관련 문서: [Dom](./Web_Interaction/DOM-Event-Basics.md#03-dom-event-basics)
+
+### 부족했던 개념 
+
+> 1. `innerText` :  HTML 요소 내부의 텍스트 값을 가져옴     
+> 사용법: `변수.innerText`
+
+> 2. `.value` : `<input>`, `<textarea>` 같은 입력 요소에서 사용자가 입력한 값을 가져옴    
+> 사용법 : `input.value`
+
+> 3. `addEventListener` : 여러개의 이벤트 핸들러를 등록할 수 있다.    
+> 사용법 : `but.addEventListener("click", () => {}`
+
+### 피드백
+1. `innerText` 를 사용하면 기존의 `button` 이 `innerText` 로 인한것인지를 몰랐음
+2. `addEventListener` 는 여러개의 이벤트 핸들러가 등록이 가능하다는 것을 까먹고 1개의 이벤트 핸들러만 사용하고 있었음
+
+
+### 주요 코드 (요약)
+```js
+// HTML 요소 선택
+const inputField = document.getElementById("in"); // 입력창 (할 일 입력)
+const addButton = document.getElementById("but"); // 추가 버튼
+const todoList = document.getElementById("ui"); // 할 일 목록 (ul)
+
+// "추가" 버튼 클릭 이벤트
+addButton.addEventListener("click", () => {
+  if (inputField.value.trim() === "") return; // 빈 값 방지
+
+  // 새로운 리스트 아이템 (li) 생성
+  const listItem = document.createElement("li");
+  listItem.innerText = inputField.value; // 입력한 값 적용
+
+  // 삭제 버튼 생성
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "삭제";
+  deleteButton.onclick = () => listItem.remove(); // 삭제 기능 추가
+
+  // 리스트 아이템(li)에 삭제 버튼 추가 후, 전체 목록에 추가
+  listItem.appendChild(deleteButton);
+  todoList.appendChild(listItem);
+
+  inputField.value = ""; // 입력창 초기화
+});
+```
+
+### 실행 화면 및 코드
+
+![To Do List 실행화면](./images/todolist.gif)
+
+**[JavaScript](/code/ToDoList/todoList.js)**
+
+**[HTML](/code/ToDoList/index.html)**
+
+---
