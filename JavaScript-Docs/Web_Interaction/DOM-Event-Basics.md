@@ -311,3 +311,17 @@ console.log(newParagraph);
   });
 </script>
 ```
+
+### isNaN
+
+> `isNaN`   
+> 주어진 값이 `NaN(Not a Number)`인지 확인
+
+**예제**
+```js
+  // 숫자가 아닌 값을 입력하면 "숫자를 입력하세요!" 라고 표시
+  if (isNaN(userInput)) { 
+    text.innerText = " 숫자를 입력해주세요!";
+    return;
+  }
+```
