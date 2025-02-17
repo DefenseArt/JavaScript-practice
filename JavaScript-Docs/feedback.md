@@ -165,3 +165,58 @@ addButton.addEventListener("click", () => {
 **[HTML](/code/ToDoList/index.html)**
 
 ---
+
+### 4. 랜덤 숫자 맞추기
+
+**기능 :** 랜덤 숫자를 출력하여 정답을 맞춤
+
+관련 문서: [DOM 이벤트](./Web_Interaction/DOM-Event-Basics.md)
+
+### 부족했던 개념 
+> 1. `isNaN` : 주어진 값이 `NaN (Not a Number)` 인지 확인     
+> 사용법 : `isNaN(userInput)`
+
+> 2. `parseInt()` : 문자열을 숫자로 변환해주는 함수   
+> 사용법 : `parseInt(inpnum.value)`
+
+### 피드백
+1. `parseInt()` 의 사용법을 인지하고 있었지만 내가 입력한 값을 숫자로 변환하는 용도로 사용할 수 있는지를 모르고 있었음
+2. `isNaN` 함수를 몰라 공백만 입력했을 때 처리하는 법을 쉽게하는 법을 몰랐음
+
+### 주요 코드 (요약)
+```js
+const inpnum = document.getElementById("inpnum"); // 숫자 입력
+const numbut = document.getElementById("numbut"); // 버튼
+const text = document.getElementById("text");
+
+const randomnumber = Math.floor(Math.random() * 100) + 1; // 랜덤 값 출력 1 ~ 100
+console.log(randomnumber);
+
+numbut.addEventListener("click", () => {
+  const userInput = parseInt(inpnum.value); // 입력 값을 숫자로 변환
+
+  if (isNaN(userInput)) {
+    text.innerText = " 숫자를 입력해주세요!";
+    return;
+  }
+
+  if (userInput === randomnumber) {
+    text.innerText = "정답입니다!";
+    inpnum.value = "";
+  }
+  else if(userInput > randomnumber)
+    text.innerText = "더 낮은 숫자를 입력하세요!";
+  else
+    text.innerText = "더 높은 숫자를 입력하세요!";
+});
+```
+
+### 실행 화면 및 코드
+![랜덤 숫자 맞추기 실행화면](./images/randomnumber.gif)
+
+**[JavaScript](/code/randomnumber/randomnumber.js)**
+
+**[HTML](/code/randomnumber/index.html)**
+
+
+---
