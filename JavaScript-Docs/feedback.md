@@ -226,7 +226,7 @@ numbut.addEventListener("click", () => {
 
 **기능 :** 버튼을 클릭하면 결과 값 출력
 
-관련 문서: 
+관련 문서: [parseFloat()](./Web_Interaction/DOM-Event-Basics.md#parsefloat)
 
 ### 부족했던 개념 
 >   1. `parseFloat()` : 문자열을 실수로 변환하는 함수    
