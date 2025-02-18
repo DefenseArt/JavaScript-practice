@@ -325,3 +325,13 @@ console.log(newParagraph);
     return;
   }
 ```
+
+### parseFloat()
+
+> `parseFloat()`    
+> 문자열을 실수로 변환하는 함수
+
+**예제**
+```js
+  const num2input = parseFloat(num2.value);
+```
