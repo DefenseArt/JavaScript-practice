@@ -220,3 +220,73 @@ numbut.addEventListener("click", () => {
 
 
 ---
+
+
+### 5. 계산기
+
+**기능 :** 버튼을 클릭하면 결과 값 출력
+
+관련 문서: 
+
+### 부족했던 개념 
+>   1. `parseFloat()` : 문자열을 실수로 변환하는 함수    
+>   사용법 : `const num2input = parseFloat(num2.value);`
+
+### 피드백
+1. 중복되는 코드가 있으면 "공통 함수로 만들 수 있는지 ?" 생각해보기
+
+
+### 주요 코드 (요약)
+```js
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const add = document.getElementById("add");
+const sub = document.getElementById("subtract");
+const mul = document.getElementById("multiply");
+const div = document.getElementById("divide");
+const result = document.getElementById("result");
+
+function getNumbers() {
+  const num1input = parseFloat(num1.value);
+  const num2input = parseFloat(num2.value);
+
+  if (isNaN(num1input) || isNaN(num2input)) {
+    result.innerText = "숫자를 입력하세요!";
+    return null;
+  }
+  return { num1input, num2input };
+}
+
+//더하기
+add.addEventListener("click", () => {
+  const numbers = getNumbers();
+  if (numbers)  result.innerText = "결과: " + (numbers.num1input + numbers.num2input);
+});
+
+//빼기
+sub.addEventListener("click", () => {
+  const numbers = getNumbers();
+  if (numbers)  result.innerText = "결과: " + (numbers.num1input - numbers.num2input);
+});
+
+//곱하기
+mul.addEventListener("click", () => { 
+  const numbers = getNumbers();
+  if (numbers) result.innerText = "결과: " + (numbers.num1input * numbers.num2input);
+});
+
+//나누기
+div.addEventListener("click", () => { 
+  const numbers = getNumbers();
+  if (numbers) result.innerText = "결과: " + (numbers.num1input / numbers.num2input);
+});
+```
+
+### 실행 화면 및 코드
+![게산기 실행 화면](./images/calculator.gif)
+
+**[JavaScript](/code/calculator/calculator.js)**
+
+**[HTML](/code/calculator/index.html)**
+
+---
