@@ -7,7 +7,7 @@
 
 **문서가 지속적으로 업데이트될 예정입니다.**  
 
-**2025.02.18 피드백 업데이트 및 DOM 조작 & 이벤트 개념 정리 업데이트 완료**
+**2025.02.19 localStorage 업데이트 완료**
 
 --- 
 
@@ -71,7 +71,7 @@ JavaScript와 HTML을 연동하여 웹 페이지에서 동적인 기능을 구�
 - **1. [DOM 조작 & 이벤트 개념 정리](/JavaScript-Docs/Web_Interaction/DOM-Event-Basics.md)**
 - **2. [카운터](./JavaScript-Docs/Web_Interaction/Counter.md)**
 - **3. [모달](/JavaScript-Docs/Web_Interaction/modal.md)**
-
+- **4. [localStorage](/JavaScript-Docs/Web_Interaction/localStorage.md)**
 ---
 
 ### **[피드백](/JavaScript-Docs/feedback.md)**
