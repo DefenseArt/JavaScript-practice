@@ -335,3 +335,16 @@ console.log(newParagraph);
 ```js
   const num2input = parseFloat(num2.value);
 ```
+
+### keydown 
+
+> `keydown`     
+> 사용자가 키를 누르는 순간 이벤트 발생
+
+**예제**
+```js
+document.addEventListener("keydown", (event) => {
+  console.log(`입력한 키: ${event.key}`);
+});
+```
+특정 키(`Enter` 등)을 감지하려면 `event.key` 사용
