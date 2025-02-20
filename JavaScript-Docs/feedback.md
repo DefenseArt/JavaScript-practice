@@ -290,3 +290,50 @@ div.addEventListener("click", () => {
 **[HTML](/code/calculator/index.html)**
 
 ---
+
+### 6. 메모장
+
+**기능 :** 메모 입력 & 화면 표시
+
+관련 문서: [DOM](./Web_Interaction/DOM-Event-Basics.md)
+
+### 부족했던 개념
+>   1. `keydown` : 사용자가 키보드를 눌렀을 때 발생하는 이벤트    
+>   사용법 : `memoInput.addEventListener("keydown", () => {});`
+
+### 피드백
+1. 특정 키(`Enter` 등)을 감지하려면 `event.key` 를 사용할 것
+
+
+### 주요 코드 (요약)
+```js
+// 1일차 메모 입력 & 화면 표시
+const memoInput = document.getElementById("memoInput");
+const addBtn = document.getElementById("addMemoBtn");
+const memoList = document.getElementById("memoList");
+
+// 엔터 
+memoInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") 
+    addBtn.click();
+});
+
+addBtn.addEventListener("click", () => {
+  if(memoInput.value.trim() === "") return; // 빈 값 방지
+
+  const mlist = document.createElement("li");
+  mlist.innerText = memoInput.value;
+  
+  memoList.appendChild(mlist);
+
+  memoInput.value = ""; // 입력 창 초기화
+});
+```
+
+### 실행 화면 및 코드
+
+**[JavaScript](/code/memo/memo.js)**
+
+**[HTML](/code/memo/index.html)**
+
+---
