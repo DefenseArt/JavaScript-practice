@@ -303,16 +303,19 @@ div.addEventListener("click", () => {
 
 ### 피드백
 1. 특정 키(`Enter` 등)을 감지하려면 `event.key` 를 사용할 것
+2. `let` 을 사용한 이유 → 메모 목록을 업데이트 해야하기 때문이다. `const`는 재할당이 불가능함
+3. `|| []` 을 사용한 이유 → `"memos"` 키가 없으면 `null` 이 반환되므로 `[](빈 배열)` 을 사용해서 초기화 함
+4. `"memos"` 키와 `let memos` 변수 → 같은 데이터를 저장하고 불러오지만 서로 다른 개념
 
 
 ### 주요 코드 (요약)
 ```js
-// 1일차 메모 입력 & 화면 표시
+// 2일차 메모 저장 & 불러오기
 const memoInput = document.getElementById("memoInput");
 const addBtn = document.getElementById("addMemoBtn");
 const memoList = document.getElementById("memoList");
 
-// 엔터 
+
 memoInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") 
     addBtn.click();
@@ -321,13 +324,29 @@ memoInput.addEventListener("keydown", (event) => {
 addBtn.addEventListener("click", () => {
   if(memoInput.value.trim() === "") return; // 빈 값 방지
 
-  const mlist = document.createElement("li");
-  mlist.innerText = memoInput.value;
+  let memos = JSON.parse(localStorage.getItem("memos")) || [];
+
+  memos.push(memoInput.value);
   
-  memoList.appendChild(mlist);
+  localStorage.setItem("memos", JSON.stringify(memos));
+
+  renderMemos();
 
   memoInput.value = ""; // 입력 창 초기화
 });
+
+function renderMemos() {
+  memoList.innerHTML = "";
+  const memos = JSON.parse(localStorage.getItem("memos")) || [];
+
+  memos.forEach((memo) => {
+    const li =document.createElement("li");
+    li.innerText = memo;
+    memoList.appendChild(li);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderMemos);
 ```
 
 ### 실행 화면 및 코드
