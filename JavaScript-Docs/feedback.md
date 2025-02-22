@@ -295,7 +295,7 @@ div.addEventListener("click", () => {
 
 **기능 :** 메모 입력 & 화면 표시
 
-관련 문서: [DOM](./Web_Interaction/DOM-Event-Basics.md)
+관련 문서: [DOM](./Web_Interaction/DOM-Event-Basics.md), [localStorage](./Web_Interaction/localStorage.md)
 
 ### 부족했던 개념
 >   1. `keydown` : 사용자가 키보드를 눌렀을 때 발생하는 이벤트    
@@ -306,15 +306,14 @@ div.addEventListener("click", () => {
 2. `let` 을 사용한 이유 → 메모 목록을 업데이트 해야하기 때문이다. `const`는 재할당이 불가능함
 3. `|| []` 을 사용한 이유 → `"memos"` 키가 없으면 `null` 이 반환되므로 `[](빈 배열)` 을 사용해서 초기화 함
 4. `"memos"` 키와 `let memos` 변수 → 같은 데이터를 저장하고 불러오지만 서로 다른 개념
-
+5. `localStorage` 의 기능 자체 미숙 → 다른 프로젝트를 더 만들어보며 학습해야함
 
 ### 주요 코드 (요약)
 ```js
-// 2일차 메모 저장 & 불러오기
+// 3일차 개별 메모 삭제
 const memoInput = document.getElementById("memoInput");
 const addBtn = document.getElementById("addMemoBtn");
 const memoList = document.getElementById("memoList");
-
 
 memoInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") 
@@ -339,9 +338,22 @@ function renderMemos() {
   memoList.innerHTML = "";
   const memos = JSON.parse(localStorage.getItem("memos")) || [];
 
-  memos.forEach((memo) => {
-    const li =document.createElement("li");
+  memos.forEach((memo, index) => {
+    const li = document.createElement("li");
     li.innerText = memo;
+ 
+    // 삭제 버튼 생성
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "삭제";
+
+    
+    deleteButton.onclick = () => {
+      const updatedMemos = memos.filter((_, i) => i !== index);
+      localStorage.setItem("memos", JSON.stringify(updatedMemos));
+      renderMemos();
+    };
+
+    li.appendChild(deleteButton);
     memoList.appendChild(li);
   });
 }
