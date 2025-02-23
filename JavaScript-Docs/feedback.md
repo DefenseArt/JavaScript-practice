@@ -301,37 +301,43 @@ div.addEventListener("click", () => {
 >   1. `keydown` : 사용자가 키보드를 눌렀을 때 발생하는 이벤트    
 >   사용법 : `memoInput.addEventListener("keydown", () => {});`
 
+
 ### 피드백
 1. 특정 키(`Enter` 등)을 감지하려면 `event.key` 를 사용할 것
 2. `let` 을 사용한 이유 → 메모 목록을 업데이트 해야하기 때문이다. `const`는 재할당이 불가능함
 3. `|| []` 을 사용한 이유 → `"memos"` 키가 없으면 `null` 이 반환되므로 `[](빈 배열)` 을 사용해서 초기화 함
 4. `"memos"` 키와 `let memos` 변수 → 같은 데이터를 저장하고 불러오지만 서로 다른 개념
 5. `localStorage` 의 기능 자체 미숙 → 다른 프로젝트를 더 만들어보며 학습해야함
+  
 
 ### 주요 코드 (요약)
 ```js
-// 3일차 개별 메모 삭제
+// 전체 삭제
 const memoInput = document.getElementById("memoInput");
 const addBtn = document.getElementById("addMemoBtn");
 const memoList = document.getElementById("memoList");
+const clearBtn = document.getElementById("clearMemoBtn");
+
+
 
 memoInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") 
-    addBtn.click();
+  if (event.key === "Enter") addBtn.click();
 });
 
 addBtn.addEventListener("click", () => {
-  if(memoInput.value.trim() === "") return; // 빈 값 방지
+  if (memoInput.value.trim() === "") return; // 빈 값 방지
 
   let memos = JSON.parse(localStorage.getItem("memos")) || [];
-
   memos.push(memoInput.value);
-  
   localStorage.setItem("memos", JSON.stringify(memos));
 
   renderMemos();
-
   memoInput.value = ""; // 입력 창 초기화
+});
+
+clearBtn.addEventListener("click", () => {
+  localStorage.clear();  // 모든 데이터 삭제
+  memoList.innerHTML = ""; // 화면에서도 즉시 삭제
 });
 
 function renderMemos() {
@@ -341,22 +347,28 @@ function renderMemos() {
   memos.forEach((memo, index) => {
     const li = document.createElement("li");
     li.innerText = memo;
- 
-    // 삭제 버튼 생성
+
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "삭제";
 
-    
     deleteButton.onclick = () => {
-      const updatedMemos = memos.filter((_, i) => i !== index);
-      localStorage.setItem("memos", JSON.stringify(updatedMemos));
-      renderMemos();
+      li.classList.add("fade-out"); // 애니메이션 효과 추가
+      setTimeout(() => {
+        const updatedMemos = memos.filter((_, i) => i !== index);
+        localStorage.setItem("memos", JSON.stringify(updatedMemos));
+        renderMemos();
+      }, 500); // 0.5초 후 삭제
     };
 
     li.appendChild(deleteButton);
     memoList.appendChild(li);
   });
 }
+
+clearBtn.addEventListener("click", () => {
+  localStorage.clear();
+  memoList.innerHTML = "";
+});
 
 document.addEventListener("DOMContentLoaded", renderMemos);
 ```
