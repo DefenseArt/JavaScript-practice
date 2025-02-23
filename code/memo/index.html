@@ -2,15 +2,19 @@
 <html lang="ko">
 <head>
     <title>메모장</title>
+    <style>
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+    </style>
 </head>
 <body>
     <h1>간단한 메모장</h1>
-    
     <input type="text" id="memoInput" placeholder="메모를 입력하세요">
     <button id="addMemoBtn">추가</button>
-
+    <button id="clearMemoBtn">전체 삭제</button>
     <ul id="memoList"></ul>
-
     <script src="./memo.js"></script> 
 </body>
 </html>
