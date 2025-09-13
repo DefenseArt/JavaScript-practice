@@ -86,6 +86,8 @@ alert(get_arguments(10, 20)); // 결과 : 30
 ```
 
 아래와 사진과 같이 동작한다.
+
+
 ![복수의 인자 동작 방법](./lmage/multiple arguments.gif)
 
 ## 함수의 다양한 정의 방법
