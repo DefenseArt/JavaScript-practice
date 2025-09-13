@@ -70,6 +70,8 @@ alert(get_argument(1)); // 결과 : 1
 ```
 
 아래의 사진과 같이 동작한다.
+
+
 ![인자 동작 방법](./lmage/arguments.gif)
 
 ## 복수의 인자
