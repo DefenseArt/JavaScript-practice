@@ -70,7 +70,7 @@ alert(get_argument(1)); // 결과 : 1
 ```
 
 아래의 사진과 같이 동작한다.
-![인자 값 설명](./review/lmage/arguments.gif)
+![인자 동작 방법](./review/lmage/arguments.gif)
 
 ## 복수의 인자
 여러개의 입력 값을 받고 싶다면  인자를 여러개 사용하면 된다
